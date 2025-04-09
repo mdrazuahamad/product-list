@@ -114,6 +114,26 @@ const App = () => {
   };
 
   const totalPrice = products.reduce((acc, cur) => acc + cur.total, 0);
+  // Order Now Button
+  // Function to handle order placement
+  const handleOrderNow = () => {
+    const orderedProducts = products.filter((p) => p.quantity > 0);
+
+    if (orderedProducts.length === 0) {
+      alert("Please select at least one product to place an order.");
+      return;
+    }
+
+    alert(`Order placed! Total: ${totalPrice} BDT`);
+
+    setProducts(
+      productList.map((item) => ({
+        ...item,
+        quantity: 0,
+        total: 0,
+      }))
+    );
+  };
 
   return (
     <div className='productBox'>
@@ -148,7 +168,10 @@ const App = () => {
               {totalPrice} BDT
             </td>
             <td>
-              <button type='submit' style={{ padding: "5px 22px", cursor: "pointer" }}>
+              <button
+                type='submit'
+                style={{ padding: "5px 22px", cursor: "pointer" }}
+                onClick={handleOrderNow}>
                 Buy Now
               </button>
             </td>
