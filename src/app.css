@@ -1,0 +1,13 @@
+.productBox {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
