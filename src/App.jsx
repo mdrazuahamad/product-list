@@ -24,7 +24,7 @@ const productList = [
     id: 104,
     productName: "Iphone 14",
     price: 88000,
-    stock: 15,
+    stock: 5,
   },
 ];
 
