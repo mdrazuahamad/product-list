@@ -114,15 +114,12 @@ const App = () => {
   };
 
   const totalPrice = products.reduce((acc, cur) => acc + cur.total, 0);
+
   return (
     <div className='productBox'>
       <h1>Product List</h1>
-      <table
-        border='1'
-        cellPadding='10'
-        cellSpacing='0'
-        style={{ width: "100%", backgroundColor: "#2c5e77", color: "white" }}>
-        <thead>
+      <table border='1' cellPadding='10' cellSpacing='0' width={"100%"}>
+        <thead style={{ width: "100%", backgroundColor: "#2c5e77", color: "white" }}>
           <tr>
             <th>ID</th>
             <th>Product Name</th>
@@ -142,6 +139,20 @@ const App = () => {
               decrement={decrementQuantity}
             />
           ))}
+
+          <tr>
+            <td colspan='5' style={{ textAlign: "right", fontWeight: "bold" }}>
+              Total Price:
+            </td>
+            <td colspan='1' style={{ textAlign: "center", fontWeight: "bold" }}>
+              {totalPrice} BDT
+            </td>
+            <td>
+              <button type='submit' style={{ padding: "5px 22px", cursor: "pointer" }}>
+                Buy Now
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

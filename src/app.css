@@ -11,3 +11,8 @@
   color: #333;
   line-height: 1.5;
 }
+
+.productBox table tr td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
